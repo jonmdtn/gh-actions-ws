@@ -1,5 +1,5 @@
 # CI/CD workshop using Github actions
-
+![Static Badge](https://img.shields.io/badge/all_your_ship-are_belong_to_us-blue)
 ## Workshop
 
 In the [Tasks](./tasks.md) file you will find the tasks for the workshop. Do as many as you can, but don't worry if you can't finish them all.
