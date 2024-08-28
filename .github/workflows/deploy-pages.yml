@@ -19,19 +19,20 @@ jobs:
       - name: build
         run: npm run build
 
-      - name: Fix permissions
-        run: |
-          chmod -c -R +rX "dist/" | while read line; do
-            echo "::warning title=Invalid file permissions automatically fixed::$line"
-          done
+      # - name: Fix permissions
+      #   run: |
+      #     chmod -c -R +rX "dist/" | while read line; do
+      #       echo "::warning title=Invalid file permissions automatically fixed::$line"
+      #     done
 
-      - name: Archive production artifacts
-        run: tar -czvf dist.tar.gz  -C dist .
+      # - name: Archive production artifacts
+      #   run: tar -czvf dist.tar.gz  -C dist .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
+          path: dist/
 
   deploy:
     name: Deploy
